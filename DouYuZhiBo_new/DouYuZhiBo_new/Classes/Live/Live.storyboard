@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ye8-mI-S7q">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ErS-zd-K4N">
+            <objects>
+                <viewController id="I0A-P2-nYK" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S0K-6B-7iw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.99988368289999996" blue="0.97914653669999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="ZKm-k9-eiR"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="GfF-Zl-S78"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kCZ-Yt-fMj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="845" y="-1057"/>
+        </scene>
+        <!--直播-->
+        <scene sceneID="NXM-F1-92v">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ye8-mI-S7q" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="直播" image="app3DTouch_onekeyOpenLive" selectedImage="app3DTouch_onekeyOpenLive" id="ZVH-Px-gHp"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="THv-Uw-KYv">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="I0A-P2-nYK" kind="relationship" relationship="rootViewController" id="jRV-BD-HJM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vvp-Sn-61w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-7" y="-1075"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="app3DTouch_onekeyOpenLive" width="35" height="35"/>
+    </resources>
+</document>
