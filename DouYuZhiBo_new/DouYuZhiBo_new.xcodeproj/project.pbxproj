@@ -20,6 +20,8 @@
 		BD32794924C14809008D9343 /* Follow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD32794824C14809008D9343 /* Follow.storyboard */; };
 		BD32795124C14BA6008D9343 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD32795024C14BA6008D9343 /* HomeViewController.swift */; };
 		BD32795424C1706B008D9343 /* UIBarBtnItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD32795324C1706B008D9343 /* UIBarBtnItem-Extension.swift */; };
+		BD32795624C17CF4008D9343 /* PageTitleVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD32795524C17CF4008D9343 /* PageTitleVIew.swift */; };
+		BD32795824C17FC0008D9343 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD32795724C17FC0008D9343 /* Common.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		BD32794824C14809008D9343 /* Follow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Follow.storyboard; sourceTree = "<group>"; };
 		BD32795024C14BA6008D9343 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BD32795324C1706B008D9343 /* UIBarBtnItem-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarBtnItem-Extension.swift"; sourceTree = "<group>"; };
+		BD32795524C17CF4008D9343 /* PageTitleVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageTitleVIew.swift; sourceTree = "<group>"; };
+		BD32795724C17FC0008D9343 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				BD32795224C1701B008D9343 /* Extension */,
+				BD32795724C17FC0008D9343 /* Common.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -308,6 +313,7 @@
 		BD32794E24C14B50008D9343 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BD32795524C17CF4008D9343 /* PageTitleVIew.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -463,8 +469,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD3278BB24C044EE008D9343 /* AppDelegate.swift in Sources */,
+				BD32795624C17CF4008D9343 /* PageTitleVIew.swift in Sources */,
 				BD3278BD24C044EE008D9343 /* SceneDelegate.swift in Sources */,
 				BD32795124C14BA6008D9343 /* HomeViewController.swift in Sources */,
+				BD32795824C17FC0008D9343 /* Common.swift in Sources */,
 				BD32795424C1706B008D9343 /* UIBarBtnItem-Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

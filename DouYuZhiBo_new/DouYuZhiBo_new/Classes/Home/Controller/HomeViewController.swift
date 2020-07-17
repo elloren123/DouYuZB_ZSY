@@ -8,13 +8,29 @@
 
 import UIKit
 
+private let kTitleViewH:CGFloat = 40
+
 class HomeViewController: UIViewController {
 
+    //MARK: - 懒加载属性
+    //这是一个自己调用的闭包语法
+    private lazy var pageTitleView:PageTitleVIew = {
+        let titleFrame = CGRect(x: 0, y: CGFloat(kStatusBarH + kNavigationBar), width: kScreenW, height: kTitleViewH)
+        let titles = ["推荐","游戏","娱乐","趣玩"]
+        let titView = PageTitleVIew(frame: titleFrame, titles: titles)
+//        titView.backgroundColor = UIColor.purple
+        return titView
+    }()
+    
+    //MARK: - 系统构造函数
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //设置UI
         setupUI()
+        
+        
+        
     }
     
 
@@ -24,8 +40,13 @@ class HomeViewController: UIViewController {
 //swift通过extension,对HomeViewController的功能模块进行划分;swift的典型做法;
 extension HomeViewController {
     private func setupUI(){
+        //MARK: - 有导航栏,scrollView会默认添加64的内边距,我们不需要,去除
+        automaticallyAdjustsScrollViewInsets = false
+        
         //设置导航栏
-       setNavigationBar()
+        setNavigationBar()
+        
+        view.addSubview(pageTitleView)
         
     }
     
