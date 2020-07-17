@@ -8,13 +8,23 @@
 
 import UIKit
 
+//class表示这个协议只能被类遵守,这是一个点击事件的协议,给ContentView同步的
+protocol PageTitleVIewDelegate:class {
+    func pageTitleView(titleView:PageTitleVIew,selectedIndex index:Int)
+}
+
+
 private let kScrollLineH:CGFloat = 2
 
 class PageTitleVIew: UIView {
     
-    //MARK: - 定义数组
+    //MARK: - 定义属性
     private var titles:[String]
-   
+    //记录当前选择的label tag
+    private var currentIndex:Int = 0
+    
+    weak var delegate : PageTitleVIewDelegate?
+    
     //MARK: - 懒加载属性
     private lazy var titleLabels = [UILabel]()
     
@@ -75,6 +85,11 @@ extension PageTitleVIew{
             label.frame = CGRect(x: labelX, y: labelY, width: labelW, height: labelH)
             scrollView.addSubview(label)
             titleLabels.append(label)
+            //2.给label添加手势
+            label.isUserInteractionEnabled = true
+            let tap = UITapGestureRecognizer(target: self, action: #selector(titleLabelClick(_:)))
+            label.addGestureRecognizer(tap)
+            
         }
     }
     
@@ -92,4 +107,35 @@ extension PageTitleVIew{
         scrollLine.frame = CGRect(x: firstlabel.frame.origin.x, y: frame.height - kScrollLineH, width: firstlabel.frame.width, height: kScrollLineH)
         
     }
+    
 }
+
+
+//MARK: - title点击事件
+extension PageTitleVIew {
+    //事件需要runtime,桥接到OC使用@objc
+    @objc func titleLabelClick(_ tap: UITapGestureRecognizer) {
+        //1.找到当前点击的label
+        guard let currentLabel = tap.view as? UILabel  else{return}
+        currentLabel.textColor = UIColor.orange
+        
+        //2.获取到之前选择的那个label
+        let  previousLabel = titleLabels[currentIndex]
+        previousLabel.textColor = UIColor.darkGray
+        
+        //3.移动 scrollLine
+        UIView.animate(withDuration: 0.2, animations: {
+            self.scrollLine.frame.origin.x = currentLabel.frame.origin.x
+//            self.scrollLine.frame = CGRect(x: currentLabel.frame.origin.x, y: self.scrollLine.frame.origin.y, width: self.scrollLine.frame.width, height: self.scrollLine.frame.height)
+        }, completion: nil)
+        
+        //4. 移动 collectionviewCell-->通过代理
+        delegate?.pageTitleView(titleView: self, selectedIndex: currentLabel.tag)
+        
+        //5.保存最新的选择label下标
+        currentIndex = currentLabel.tag
+     }
+    
+    
+}
+

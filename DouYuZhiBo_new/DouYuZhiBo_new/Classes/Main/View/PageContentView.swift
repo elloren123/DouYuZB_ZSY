@@ -87,3 +87,15 @@ extension PageContentView:UICollectionViewDataSource{
         return cell
     }
 }
+
+
+//MARK: - 对外暴露的方法
+extension PageContentView {
+    func setCurrentIndex(currentIndex:Int) -> Void {
+        let offsetX = CGFloat(currentIndex) * collectionVIew.frame.width //计算偏移量
+        collectionVIew.setContentOffset(CGPoint(x: offsetX, y: 0), animated: false)
+        
+    }
+    
+    
+}

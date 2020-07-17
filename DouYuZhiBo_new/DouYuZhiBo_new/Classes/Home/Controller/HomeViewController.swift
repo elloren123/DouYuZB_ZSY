@@ -14,11 +14,11 @@ class HomeViewController: UIViewController {
 
     //MARK: - 懒加载属性
     //这是一个自己调用的闭包语法
-    private lazy var pageTitleView:PageTitleVIew = {
+    private lazy var pageTitleView:PageTitleVIew = {[weak self] in
         let titleFrame = CGRect(x: 0, y: CGFloat(kStatusBarH + kNavigationBar), width: kScreenW, height: kTitleViewH)
         let titles = ["推荐","游戏","娱乐","趣玩"]
         let titView = PageTitleVIew(frame: titleFrame, titles: titles)
-//        titView.backgroundColor = UIColor.purple
+        titView.delegate = self
         return titView
     }()
     
@@ -83,4 +83,12 @@ extension HomeViewController {
         navigationItem.rightBarButtonItems = [historyItem,searchItem,qrcodeItem]
         
     }
+}
+
+//MARK: - 遵守PageTitleVIewDelegate协议
+extension HomeViewController:PageTitleVIewDelegate {
+    func pageTitleView(titleView: PageTitleVIew, selectedIndex index: Int) {
+        pageContentView.setCurrentIndex(currentIndex: index)
+    }
+    
 }
