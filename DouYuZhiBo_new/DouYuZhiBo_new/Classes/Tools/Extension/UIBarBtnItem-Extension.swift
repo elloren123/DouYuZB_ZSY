@@ -20,11 +20,19 @@ extension UIBarButtonItem{
     
     //这种是常用的方式
     //便利构造函数,要以convenience开头;函数中必须调用设计的构造函数(self调用的)
-    convenience init(imageName:String,highImageName:String,size:CGSize) {
+    //考虑到其他的地方可能也要创建BarButtonItem,而且可能不需要highImageName,这里给出默认参数
+    //size同理
+    convenience init(imageName:String,highImageName:String = "",size:CGSize = CGSize.zero) {
         let btn = UIButton()
         btn.setImage(UIImage.init(named: imageName), for: .normal)
-        btn.setImage(UIImage.init(named: highImageName), for: .highlighted)
-        btn.frame = CGRect(origin: CGPoint.zero, size: size)
+        if highImageName != ""{
+            btn.setImage(UIImage.init(named: highImageName), for: .highlighted)
+        }
+        if size == CGSize.zero {
+            btn.sizeToFit()
+        }else{
+            btn.frame = CGRect(origin: CGPoint.zero, size: size)
+        }
         self.init(customView:btn)
     }
     
