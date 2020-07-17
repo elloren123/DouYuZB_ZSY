@@ -17,6 +17,7 @@ class PageTitleVIew: UIView {
    
     //MARK: - 懒加载属性
     private lazy var titleLabels = [UILabel]()
+    
     private lazy var scrollView:UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.showsHorizontalScrollIndicator = false
@@ -24,6 +25,7 @@ class PageTitleVIew: UIView {
         scrollView.bounces = false //边界回弹
         return scrollView
     }()
+    
     private lazy var scrollLine:UIView = {
        let scrollLine = UIView()
         scrollLine.backgroundColor = UIColor.orange
@@ -85,10 +87,8 @@ extension PageTitleVIew{
         addSubview(bottomLine)
         //2. 添加可滚动的line,其他地方可能用到,这里直接懒加载出来
         scrollView.addSubview(scrollLine)
-        guard let firstlabel = titleLabels.first else {
-            return
-        }
-        
+        guard let firstlabel = titleLabels.first else {return}
+        firstlabel.textColor = UIColor.orange
         scrollLine.frame = CGRect(x: firstlabel.frame.origin.x, y: frame.height - kScrollLineH, width: firstlabel.frame.width, height: kScrollLineH)
         
     }
