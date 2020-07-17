@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bma-GC-8BU">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="7gF-aW-b0t">
+            <objects>
+                <viewController id="pQV-eK-ODr" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Ak-TP-8i8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.99988368289999996" blue="0.97914653669999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="Gyn-NK-es8"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="345-mP-d4T"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hxx-FV-alT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="845" y="-405"/>
+        </scene>
+        <!--关注-->
+        <scene sceneID="70Z-U1-Fnf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bma-GC-8BU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="关注" image="app3DTouch_checkin" selectedImage="app3DTouch_checkin" id="1c6-MI-myi"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="jVh-EI-mV2"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gSi-54-19G">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pQV-eK-ODr" kind="relationship" relationship="rootViewController" id="OmO-Xz-GW7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YZE-WM-hXF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="22" y="-405"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="app3DTouch_checkin" width="35" height="35"/>
+    </resources>
+</document>
