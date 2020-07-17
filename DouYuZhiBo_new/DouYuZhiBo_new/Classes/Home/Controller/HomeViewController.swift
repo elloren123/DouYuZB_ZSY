@@ -22,7 +22,7 @@ class HomeViewController: UIViewController {
         return titView
     }()
     
-    private lazy var pageContentView:PageContentView = {
+    private lazy var pageContentView:PageContentView = {[weak self] in
         //frame
         let contentH = kScreenH - kStatusBarH - kNavigationBar - kTitleViewH
         let contentFrame = CGRect(x: 0, y: kStatusBarH + kNavigationBar + kTitleViewH, width: kScreenW, height: contentH)

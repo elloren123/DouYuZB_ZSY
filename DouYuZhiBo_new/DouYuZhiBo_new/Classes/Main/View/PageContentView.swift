@@ -14,12 +14,13 @@ class PageContentView: UIView {
 
     //MARK: - 自定义属性
     private var childVCs:[UIViewController]
-    private var parentVC:UIViewController
+    //weak消除强引用,变成可选类型
+    private weak var parentVC:UIViewController?
     
     //MARK: - 懒加载
-    private lazy var collectionVIew:UICollectionView = {
+    private lazy var collectionVIew:UICollectionView = {[weak self] in
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = self.bounds.size
+        layout.itemSize = (self?.bounds.size)!
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
         layout.scrollDirection = .horizontal
@@ -36,7 +37,7 @@ class PageContentView: UIView {
     
     
     //MARK: - 自定义构造函数
-    init(frame: CGRect,chileVCs:[UIViewController],parentVC:UIViewController) {
+    init(frame: CGRect,chileVCs:[UIViewController],parentVC:UIViewController?) {
         self.childVCs = chileVCs
         self.parentVC = parentVC
         super.init(frame: frame)
@@ -55,7 +56,7 @@ extension PageContentView {
     private func setupUI() {
         //1.把所有VC添加到父视图
         for childVC in childVCs{
-            parentVC.addChild(childVC)
+            parentVC?.addChild(childVC)
         }
         
         //2.添加collectionView,在cell中存放控制器view
