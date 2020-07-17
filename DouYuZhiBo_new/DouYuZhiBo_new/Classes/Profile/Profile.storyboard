@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QWB-95-pT5">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,7 +13,7 @@
             <objects>
                 <viewController id="PUZ-mU-DKF" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="A63-9X-eAX">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="0.99988368289999996" blue="0.97914653669999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="RxR-8Y-X3O"/>
@@ -26,7 +28,7 @@
         <scene sceneID="9Tc-5W-Dgz">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QWB-95-pT5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="我的" image="app3DTouch_attention" selectedImage="app3DTouch_attention" id="bZV-uX-e5L"/>
+                    <tabBarItem key="tabBarItem" title="我的" image="btn_user_normal" selectedImage="btn_user_selected" id="bZV-uX-e5L"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="gTr-aK-jW7"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Krz-UV-Xeo">
@@ -44,6 +46,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="app3DTouch_attention" width="35" height="35"/>
+        <image name="btn_user_normal" width="24" height="24"/>
+        <image name="btn_user_selected" width="24" height="24"/>
     </resources>
 </document>

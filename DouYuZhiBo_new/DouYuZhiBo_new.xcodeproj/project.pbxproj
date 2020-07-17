@@ -19,6 +19,7 @@
 		BD32794124C147E9008D9343 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD32793D24C147E9008D9343 /* Home.storyboard */; };
 		BD32794924C14809008D9343 /* Follow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD32794824C14809008D9343 /* Follow.storyboard */; };
 		BD32795124C14BA6008D9343 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD32795024C14BA6008D9343 /* HomeViewController.swift */; };
+		BD32795424C1706B008D9343 /* UIBarBtnItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD32795324C1706B008D9343 /* UIBarBtnItem-Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		BD32793D24C147E9008D9343 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		BD32794824C14809008D9343 /* Follow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Follow.storyboard; sourceTree = "<group>"; };
 		BD32795024C14BA6008D9343 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BD32795324C1706B008D9343 /* UIBarBtnItem-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarBtnItem-Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 		BD3278F024C0666D008D9343 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				BD32795224C1701B008D9343 /* Extension */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -316,6 +319,14 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		BD32795224C1701B008D9343 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				BD32795324C1706B008D9343 /* UIBarBtnItem-Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -454,6 +465,7 @@
 				BD3278BB24C044EE008D9343 /* AppDelegate.swift in Sources */,
 				BD3278BD24C044EE008D9343 /* SceneDelegate.swift in Sources */,
 				BD32795124C14BA6008D9343 /* HomeViewController.swift in Sources */,
+				BD32795424C1706B008D9343 /* UIBarBtnItem-Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

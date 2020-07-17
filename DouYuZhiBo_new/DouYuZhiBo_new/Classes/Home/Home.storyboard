@@ -28,7 +28,7 @@
         <scene sceneID="mtr-yX-Xeg">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="62b-MB-Lwj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="首页" image="app3DTouch_attention" selectedImage="app3DTouch_attention" id="WzA-9C-nX1"/>
+                    <tabBarItem key="tabBarItem" title="首页" image="btn_home_normal" selectedImage="btn_home_selected" id="WzA-9C-nX1"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sfU-C2-LaQ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -45,6 +45,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="app3DTouch_attention" width="35" height="35"/>
+        <image name="btn_home_normal" width="24" height="24"/>
+        <image name="btn_home_selected" width="24" height="24"/>
     </resources>
 </document>

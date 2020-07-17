@@ -31,7 +31,7 @@
         <scene sceneID="bp9-Jn-T3z">
             <objects>
                 <viewControllerPlaceholder storyboardName="Home" id="4VW-hH-SNH" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="5r2-9w-RtW"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="btn_home_normal" selectedImage="btn_home_selected" id="5r2-9w-RtW"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eHo-bJ-xoO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -41,7 +41,7 @@
         <scene sceneID="eim-wf-bYa">
             <objects>
                 <viewControllerPlaceholder storyboardName="Live" id="VnB-B6-mTs" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="CwF-Uy-DDK"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="btn_column_normal" selectedImage="btn_column_selected" id="CwF-Uy-DDK"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aTY-B6-Dxx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -51,7 +51,7 @@
         <scene sceneID="8bz-mG-f4r">
             <objects>
                 <viewControllerPlaceholder storyboardName="Follow" id="m76-FS-SDr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="e7w-LR-cQJ"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="btn_live_normal" selectedImage="btn_live_selected" id="e7w-LR-cQJ"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NLe-zg-gsg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -61,11 +61,21 @@
         <scene sceneID="c3E-Pa-Cfa">
             <objects>
                 <viewControllerPlaceholder storyboardName="Profile" id="7gY-Na-CJZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="oXP-wj-Qlk"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="btn_user_normal" selectedImage="btn_user_selected" id="oXP-wj-Qlk"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JcU-q0-iWs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-106" y="-15"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="btn_column_normal" width="24" height="24"/>
+        <image name="btn_column_selected" width="24" height="24"/>
+        <image name="btn_home_normal" width="24" height="24"/>
+        <image name="btn_home_selected" width="24" height="24"/>
+        <image name="btn_live_normal" width="30" height="24"/>
+        <image name="btn_live_selected" width="30" height="24"/>
+        <image name="btn_user_normal" width="24" height="24"/>
+        <image name="btn_user_selected" width="24" height="24"/>
+    </resources>
 </document>

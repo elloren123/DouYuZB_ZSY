@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bma-GC-8BU">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,7 +13,7 @@
             <objects>
                 <viewController id="pQV-eK-ODr" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Ak-TP-8i8">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="0.99988368289999996" blue="0.97914653669999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="Gyn-NK-es8"/>
@@ -26,7 +28,7 @@
         <scene sceneID="70Z-U1-Fnf">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bma-GC-8BU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="关注" image="app3DTouch_checkin" selectedImage="app3DTouch_checkin" id="1c6-MI-myi"/>
+                    <tabBarItem key="tabBarItem" title="关注" image="btn_live_normal" selectedImage="btn_live_selected" id="1c6-MI-myi"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="jVh-EI-mV2"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gSi-54-19G">
@@ -44,6 +46,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="app3DTouch_checkin" width="35" height="35"/>
+        <image name="btn_live_normal" width="30" height="24"/>
+        <image name="btn_live_selected" width="30" height="24"/>
     </resources>
 </document>
