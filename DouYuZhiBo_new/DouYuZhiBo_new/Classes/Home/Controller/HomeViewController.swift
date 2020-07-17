@@ -12,9 +12,25 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        //设置UI
+        setupUI()
     }
     
 
 
+}
+//MARK: - 设置UI界面
+//swift通过extension,对HomeViewController的功能模块进行划分;swift的典型做法;
+extension HomeViewController {
+    private func setupUI(){
+        //设置导航栏
+       setNavigationBar()
+        
+    }
+    
+    private func setNavigationBar(){
+        
+        
+    }
 }
