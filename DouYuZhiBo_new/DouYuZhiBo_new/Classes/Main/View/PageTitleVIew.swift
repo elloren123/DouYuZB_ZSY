@@ -10,11 +10,13 @@ import UIKit
 
 //class表示这个协议只能被类遵守,这是一个点击事件的协议,给ContentView同步的
 protocol PageTitleVIewDelegate:class {
-    func pageTitleView(titleView:PageTitleVIew,selectedIndex index:Int)
+    func pageTitleViewTap(titleView:PageTitleVIew,selectedIndex index:Int)
 }
 
 
 private let kScrollLineH:CGFloat = 2
+private let kNormalColor:(CGFloat,CGFloat,CGFloat) = (85,85,85)
+private let kSelectColor:(CGFloat,CGFloat,CGFloat) = (255,128,0)
 
 class PageTitleVIew: UIView {
     
@@ -79,7 +81,7 @@ extension PageTitleVIew{
             label.text = title
             label.tag = index
             label.font = UIFont.systemFont(ofSize: 16.0)
-            label.textColor = UIColor.darkGray
+            label.textColor = UIColor(R: kNormalColor.0, G: kNormalColor.1, B: kNormalColor.2)
             label.textAlignment = .center
             let labelX:CGFloat = labelW * CGFloat(index)
             label.frame = CGRect(x: labelX, y: labelY, width: labelW, height: labelH)
@@ -115,26 +117,67 @@ extension PageTitleVIew{
 extension PageTitleVIew {
     //事件需要runtime,桥接到OC使用@objc
     @objc func titleLabelClick(_ tap: UITapGestureRecognizer) {
+        
         //1.找到当前点击的label
         guard let currentLabel = tap.view as? UILabel  else{return}
-        currentLabel.textColor = UIColor.orange
+        currentLabel.textColor = UIColor(R: kSelectColor.0, G: kSelectColor.1, B: kSelectColor.2)
         
         //2.获取到之前选择的那个label
         let  previousLabel = titleLabels[currentIndex]
-        previousLabel.textColor = UIColor.darkGray
+        //不相同才需要设置,如果相同,说明是点击了当前选择的按钮,不做任何操作
+        if currentLabel == previousLabel {return}
+        
+        previousLabel.textColor = UIColor(R: kNormalColor.0, G: kNormalColor.1, B: kNormalColor.2)
         
         //3.移动 scrollLine
         UIView.animate(withDuration: 0.2, animations: {
             self.scrollLine.frame.origin.x = currentLabel.frame.origin.x
-//            self.scrollLine.frame = CGRect(x: currentLabel.frame.origin.x, y: self.scrollLine.frame.origin.y, width: self.scrollLine.frame.width, height: self.scrollLine.frame.height)
         }, completion: nil)
         
         //4. 移动 collectionviewCell-->通过代理
-        delegate?.pageTitleView(titleView: self, selectedIndex: currentLabel.tag)
+        delegate?.pageTitleViewTap(titleView: self, selectedIndex: currentLabel.tag)
         
         //5.保存最新的选择label下标
         currentIndex = currentLabel.tag
      }
+}
+
+//MARK: - 对外暴露接口
+
+extension PageTitleVIew {
+    func setCurrentIndex(progress:CGFloat,sourceIndex:Int,targetIndex:Int) -> Void {
+        let  sourceLabel = titleLabels[sourceIndex]
+        let  targetLabel = titleLabels[targetIndex]
+        
+        //1. 计算出移动的距离,可能是正数也可能是负数
+        let moveTotalX = targetLabel.frame.origin.x - sourceLabel.frame.origin.x
+        let moveX = moveTotalX * progress
+        scrollLine.frame.origin.x = sourceLabel.frame.origin.x + moveX
+        
+        //2. 颜色渐变过渡
+        let r_s:CGFloat = kSelectColor.0 - (kSelectColor.0 - kNormalColor.0)*progress
+        let g_s:CGFloat = kSelectColor.1 - (kSelectColor.1 - kNormalColor.1)*progress
+        let b_s:CGFloat = kSelectColor.2
+        sourceLabel.textColor = UIColor(R: r_s, G: g_s, B: b_s)
+       
+        let r:CGFloat = kNormalColor.0 + (kSelectColor.0 - kNormalColor.0)*progress
+        let g:CGFloat = kNormalColor.1 + (kSelectColor.1 - kNormalColor.1)*progress
+        let b:CGFloat = kNormalColor.2
+        targetLabel.textColor = UIColor(R: r, G: g, B: b)
+        
+        //3. 因为经常 progress无法出现到1的情况,在0.95以上,直接设置成灰色
+        if progress > 0.95 {
+            sourceLabel.textColor = UIColor(R: kNormalColor.0, G: kNormalColor.1, B: kNormalColor.2)
+        }
+        
+        //4. 当两个label相同时,意味着已经滑动完成,设置成选中颜色
+        if sourceLabel == targetLabel {
+            targetLabel.textColor = UIColor(R: kSelectColor.0, G: kSelectColor.1, B: kSelectColor.2)
+        }
+        
+        //5. 记录当前选择的下标
+        currentIndex = targetIndex
+    }
     
     
 }

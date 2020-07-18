@@ -26,7 +26,7 @@ class HomeViewController: UIViewController {
         //frame
         let contentH = kScreenH - kStatusBarH - kNavigationBar - kTitleViewH
         let contentFrame = CGRect(x: 0, y: kStatusBarH + kNavigationBar + kTitleViewH, width: kScreenW, height: contentH)
-        //子控制器
+        //子控制器(先使用默认的VC创建,后面再单独完善各个VC)
         var childVCs = [UIViewController]()
         for _ in 0..<4{
             let vc = UIViewController()
@@ -34,6 +34,7 @@ class HomeViewController: UIViewController {
             childVCs.append(vc)
         }
         let contentView = PageContentView(frame: contentFrame, chileVCs: childVCs, parentVC: self)
+        contentView.delegate = self
         return contentView
     }()
     
@@ -87,8 +88,16 @@ extension HomeViewController {
 
 //MARK: - 遵守PageTitleVIewDelegate协议
 extension HomeViewController:PageTitleVIewDelegate {
-    func pageTitleView(titleView: PageTitleVIew, selectedIndex index: Int) {
+    func pageTitleViewTap(titleView: PageTitleVIew, selectedIndex index: Int) {
         pageContentView.setCurrentIndex(currentIndex: index)
+    }
+    
+}
+
+//MARK: - 遵守PageContentViewDelegate协议
+extension HomeViewController:PageContentViewDelegate {
+    func PageContentViewScroll(contentView: PageContentView, progress: CGFloat, sourceIndex: Int, targetIndex: Int) {
+        pageTitleView.setCurrentIndex(progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
     }
     
 }
