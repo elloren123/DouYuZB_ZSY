@@ -34,7 +34,7 @@ class RecommendViewController: UIViewController {
         //这里的frame,给的是 self.view.bounds
        
         print(self.view.bounds) //-->在VC内部的这个bounds,在创建时并没有设置,所以会打印成屏幕大小
-      
+
         let collectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
         collectionView.backgroundColor = UIColor.white
         collectionView.dataSource = self
@@ -42,7 +42,11 @@ class RecommendViewController: UIViewController {
         collectionView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
         
         //注册cell
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kNormalCellID)
+//        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kNormalCellID)
+        //注册普通cell-->XIB
+        collectionView.register(UINib(nibName: "CollectionViewNormalCell", bundle: nil), forCellWithReuseIdentifier: kNormalCellID)
+        
+        
         //注册Header
 //         collectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: kNormalHeaderID)
         //注册Header-->XIB
@@ -55,13 +59,10 @@ class RecommendViewController: UIViewController {
     //MARK: - 系统回调函数
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = UIColor.purple
         
         setupUI()
+
         
-        
-       
     }
     
 
@@ -91,7 +92,7 @@ extension RecommendViewController:UICollectionViewDataSource {
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath)
-        cell.backgroundColor = UIColor.green
+//        cell.backgroundColor = UIColor.green
         return cell
         
     }

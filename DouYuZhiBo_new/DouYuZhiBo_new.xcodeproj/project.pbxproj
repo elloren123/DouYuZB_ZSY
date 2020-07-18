@@ -27,6 +27,8 @@
 		BD32796024C2BFA1008D9343 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD32795F24C2BFA1008D9343 /* RecommendViewController.swift */; };
 		BD32796324C2D692008D9343 /* RecommentCollectionHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD32796124C2D692008D9343 /* RecommentCollectionHeadView.swift */; };
 		BD32796424C2D692008D9343 /* RecommentCollectionHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD32796224C2D692008D9343 /* RecommentCollectionHeadView.xib */; };
+		BD32796724C2DC41008D9343 /* CollectionViewNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD32796524C2DC41008D9343 /* CollectionViewNormalCell.swift */; };
+		BD32796824C2DC41008D9343 /* CollectionViewNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD32796624C2DC41008D9343 /* CollectionViewNormalCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		BD32795F24C2BFA1008D9343 /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		BD32796124C2D692008D9343 /* RecommentCollectionHeadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommentCollectionHeadView.swift; sourceTree = "<group>"; };
 		BD32796224C2D692008D9343 /* RecommentCollectionHeadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommentCollectionHeadView.xib; sourceTree = "<group>"; };
+		BD32796524C2DC41008D9343 /* CollectionViewNormalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewNormalCell.swift; sourceTree = "<group>"; };
+		BD32796624C2DC41008D9343 /* CollectionViewNormalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewNormalCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -328,6 +332,8 @@
 			children = (
 				BD32795524C17CF4008D9343 /* PageTitleVIew.swift */,
 				BD32795924C18DB0008D9343 /* PageContentView.swift */,
+				BD32796524C2DC41008D9343 /* CollectionViewNormalCell.swift */,
+				BD32796624C2DC41008D9343 /* CollectionViewNormalCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -457,6 +463,7 @@
 				BD3278C424C044EF008D9343 /* Assets.xcassets in Resources */,
 				BD32796424C2D692008D9343 /* RecommentCollectionHeadView.xib in Resources */,
 				BD3278C224C044EE008D9343 /* Main.storyboard in Resources */,
+				BD32796824C2DC41008D9343 /* CollectionViewNormalCell.xib in Resources */,
 				BD32794924C14809008D9343 /* Follow.storyboard in Resources */,
 				BD32793524C135D4008D9343 /* Live.storyboard in Resources */,
 				BD32793A24C13602008D9343 /* Profile.storyboard in Resources */,
@@ -489,6 +496,7 @@
 				BD32796024C2BFA1008D9343 /* RecommendViewController.swift in Sources */,
 				BD3278BD24C044EE008D9343 /* SceneDelegate.swift in Sources */,
 				BD32795C24C192F8008D9343 /* UIColor_Extension.swift in Sources */,
+				BD32796724C2DC41008D9343 /* CollectionViewNormalCell.swift in Sources */,
 				BD32795A24C18DB0008D9343 /* PageContentView.swift in Sources */,
 				BD32795124C14BA6008D9343 /* HomeViewController.swift in Sources */,
 				BD32796324C2D692008D9343 /* RecommentCollectionHeadView.swift in Sources */,
