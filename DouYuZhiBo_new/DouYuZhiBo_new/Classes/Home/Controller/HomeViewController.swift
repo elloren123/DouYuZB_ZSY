@@ -4,7 +4,9 @@
 //
 //  Created by LEPU on 2020/7/17.
 //  Copyright © 2020 LEPU. All rights reserved.
-//
+/**
+ 首页
+ */
 
 import UIKit
 
@@ -24,11 +26,13 @@ class HomeViewController: UIViewController {
     
     private lazy var pageContentView:PageContentView = {[weak self] in
         //frame
-        let contentH = kScreenH - kStatusBarH - kNavigationBar - kTitleViewH
+        let contentH = kScreenH - kStatusBarH - kNavigationBar - kTitleViewH - kTabBarH
         let contentFrame = CGRect(x: 0, y: kStatusBarH + kNavigationBar + kTitleViewH, width: kScreenW, height: contentH)
         //子控制器(先使用默认的VC创建,后面再单独完善各个VC)
         var childVCs = [UIViewController]()
-        for _ in 0..<4{
+        
+        childVCs.append(RecommendViewController())//添加推荐VC
+        for _ in 0..<3{
             let vc = UIViewController()
             vc.view.backgroundColor = UIColor(R: CGFloat(arc4random_uniform(255)), G: CGFloat(arc4random_uniform(255)), B: CGFloat(arc4random_uniform(255)))
             childVCs.append(vc)
