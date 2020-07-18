@@ -36,7 +36,7 @@ class RecommendViewController: UIViewController {
         print(self.view.bounds) //-->在VC内部的这个bounds,在创建时并没有设置,所以会打印成屏幕大小
       
         let collectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
-        collectionView.backgroundColor = UIColor.blue
+        collectionView.backgroundColor = UIColor.white
         collectionView.dataSource = self
         //给collectionView添加约束,让其随着父控件拉伸
         collectionView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
@@ -44,7 +44,10 @@ class RecommendViewController: UIViewController {
         //注册cell
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kNormalCellID)
         //注册Header
-         collectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: kNormalHeaderID)
+//         collectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: kNormalHeaderID)
+        //注册Header-->XIB
+        collectionView.register(UINib(nibName: "RecommentCollectionHeadView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: kNormalHeaderID)
+        
         return collectionView
     }()
     
@@ -94,7 +97,8 @@ extension RecommendViewController:UICollectionViewDataSource {
     }
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kNormalHeaderID, for: indexPath)
-        headerView.backgroundColor = UIColor.white
+//        headerView.backgroundColor = UIColor.white
+        
         return headerView
     }
     

@@ -25,6 +25,8 @@
 		BD32795C24C192F8008D9343 /* UIColor_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD32795B24C192F8008D9343 /* UIColor_Extension.swift */; };
 		BD32795E24C2BF8B008D9343 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD32795D24C2BF8B008D9343 /* Home.storyboard */; };
 		BD32796024C2BFA1008D9343 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD32795F24C2BFA1008D9343 /* RecommendViewController.swift */; };
+		BD32796324C2D692008D9343 /* RecommentCollectionHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD32796124C2D692008D9343 /* RecommentCollectionHeadView.swift */; };
+		BD32796424C2D692008D9343 /* RecommentCollectionHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD32796224C2D692008D9343 /* RecommentCollectionHeadView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		BD32795B24C192F8008D9343 /* UIColor_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor_Extension.swift; sourceTree = "<group>"; };
 		BD32795D24C2BF8B008D9343 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		BD32795F24C2BFA1008D9343 /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
+		BD32796124C2D692008D9343 /* RecommentCollectionHeadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommentCollectionHeadView.swift; sourceTree = "<group>"; };
+		BD32796224C2D692008D9343 /* RecommentCollectionHeadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommentCollectionHeadView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +247,8 @@
 		BD32794024C147E9008D9343 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BD32796124C2D692008D9343 /* RecommentCollectionHeadView.swift */,
+				BD32796224C2D692008D9343 /* RecommentCollectionHeadView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -449,6 +455,7 @@
 				BD32795E24C2BF8B008D9343 /* Home.storyboard in Resources */,
 				BD3278C724C044EF008D9343 /* LaunchScreen.storyboard in Resources */,
 				BD3278C424C044EF008D9343 /* Assets.xcassets in Resources */,
+				BD32796424C2D692008D9343 /* RecommentCollectionHeadView.xib in Resources */,
 				BD3278C224C044EE008D9343 /* Main.storyboard in Resources */,
 				BD32794924C14809008D9343 /* Follow.storyboard in Resources */,
 				BD32793524C135D4008D9343 /* Live.storyboard in Resources */,
@@ -484,6 +491,7 @@
 				BD32795C24C192F8008D9343 /* UIColor_Extension.swift in Sources */,
 				BD32795A24C18DB0008D9343 /* PageContentView.swift in Sources */,
 				BD32795124C14BA6008D9343 /* HomeViewController.swift in Sources */,
+				BD32796324C2D692008D9343 /* RecommentCollectionHeadView.swift in Sources */,
 				BD32795824C17FC0008D9343 /* Common.swift in Sources */,
 				BD32795424C1706B008D9343 /* UIBarBtnItem-Extension.swift in Sources */,
 			);
