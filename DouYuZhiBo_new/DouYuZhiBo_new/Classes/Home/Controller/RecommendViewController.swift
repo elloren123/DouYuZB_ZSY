@@ -21,6 +21,7 @@ private let kNormalHeaderID = "RecommendVCkNormalHeaderID"
 
 class RecommendViewController: UIViewController {
     //MARK: - 懒加载
+    private lazy var recommentVM:RecommentViewModel = RecommentViewModel()
     private lazy var collectionView:UICollectionView = { [unowned self] in
         //创建布局
         let layout = UICollectionViewFlowLayout()
@@ -64,7 +65,7 @@ class RecommendViewController: UIViewController {
         
         setupUI()
 
-        
+        loadData()
     }
     
 
@@ -74,6 +75,15 @@ class RecommendViewController: UIViewController {
 extension RecommendViewController {
     private func setupUI(){
         view.addSubview(collectionView)
+    }
+    
+}
+
+//MARK: - 请求数据
+extension RecommendViewController {
+    func loadData() {
+        recommentVM.requestData()
+    
     }
     
 }
