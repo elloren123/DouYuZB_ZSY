@@ -32,8 +32,9 @@
 		BD32796824C2DC41008D9343 /* CollectionViewNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD32796624C2DC41008D9343 /* CollectionViewNormalCell.xib */; };
 		BD32796B24C2E514008D9343 /* CollectionBeautifulCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD32796924C2E514008D9343 /* CollectionBeautifulCell.swift */; };
 		BD32796C24C2E514008D9343 /* CollectionBeautifulCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD32796A24C2E514008D9343 /* CollectionBeautifulCell.xib */; };
-		BD68BCB224C410670005F31C /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD68BCB124C410670005F31C /* NetworkTools.swift */; };
 		BD68BCB524C416A00005F31C /* RecommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD68BCB424C416A00005F31C /* RecommentViewModel.swift */; };
+		BD68BCB724C41C340005F31C /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD68BCB624C41C340005F31C /* NSDate-Extension.swift */; };
+		BD68BCB924C438400005F31C /* AnchorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD68BCB824C438400005F31C /* AnchorGroup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,8 +88,9 @@
 		BD32796624C2DC41008D9343 /* CollectionViewNormalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewNormalCell.xib; sourceTree = "<group>"; };
 		BD32796924C2E514008D9343 /* CollectionBeautifulCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionBeautifulCell.swift; sourceTree = "<group>"; };
 		BD32796A24C2E514008D9343 /* CollectionBeautifulCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionBeautifulCell.xib; sourceTree = "<group>"; };
-		BD68BCB124C410670005F31C /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
 		BD68BCB424C416A00005F31C /* RecommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommentViewModel.swift; sourceTree = "<group>"; };
+		BD68BCB624C41C340005F31C /* NSDate-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
+		BD68BCB824C438400005F31C /* AnchorGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorGroup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,7 +217,6 @@
 			isa = PBXGroup;
 			children = (
 				BD32795224C1701B008D9343 /* Extension */,
-				BD68BCB124C410670005F31C /* NetworkTools.swift */,
 				BD32795724C17FC0008D9343 /* Common.swift */,
 			);
 			path = Tools;
@@ -357,6 +358,7 @@
 		BD32794D24C14B50008D9343 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BD68BCB824C438400005F31C /* AnchorGroup.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -386,6 +388,7 @@
 			children = (
 				BD32795324C1706B008D9343 /* UIBarBtnItem-Extension.swift */,
 				BD32795B24C192F8008D9343 /* UIColor_Extension.swift */,
+				BD68BCB624C41C340005F31C /* NSDate-Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -409,7 +412,7 @@
 				BD3278B324C044EE008D9343 /* Sources */,
 				BD3278B424C044EE008D9343 /* Frameworks */,
 				BD3278B524C044EE008D9343 /* Resources */,
-				EE94C03D5DE0374F8CDDBC34 /* [CP] Embed Pods Frameworks */,
+				732FA489CF43EC1CD4B4B7AA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -534,6 +537,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		732FA489CF43EC1CD4B4B7AA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DouYuZhiBo_new/Pods-DouYuZhiBo_new-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DouYuZhiBo_new/Pods-DouYuZhiBo_new-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DouYuZhiBo_new/Pods-DouYuZhiBo_new-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7F4CDDF3078F2AE225FD44E0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -556,23 +576,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EE94C03D5DE0374F8CDDBC34 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DouYuZhiBo_new/Pods-DouYuZhiBo_new-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DouYuZhiBo_new/Pods-DouYuZhiBo_new-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DouYuZhiBo_new/Pods-DouYuZhiBo_new-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -584,14 +587,15 @@
 				BD32795624C17CF4008D9343 /* PageTitleVIew.swift in Sources */,
 				BD32796024C2BFA1008D9343 /* RecommendViewController.swift in Sources */,
 				BD3278BD24C044EE008D9343 /* SceneDelegate.swift in Sources */,
+				BD68BCB924C438400005F31C /* AnchorGroup.swift in Sources */,
 				BD32795C24C192F8008D9343 /* UIColor_Extension.swift in Sources */,
 				BD32796B24C2E514008D9343 /* CollectionBeautifulCell.swift in Sources */,
 				BD32796724C2DC41008D9343 /* CollectionViewNormalCell.swift in Sources */,
 				BD32795A24C18DB0008D9343 /* PageContentView.swift in Sources */,
 				BD32795124C14BA6008D9343 /* HomeViewController.swift in Sources */,
 				BD32796324C2D692008D9343 /* RecommentCollectionHeadView.swift in Sources */,
+				BD68BCB724C41C340005F31C /* NSDate-Extension.swift in Sources */,
 				BD32795824C17FC0008D9343 /* Common.swift in Sources */,
-				BD68BCB224C410670005F31C /* NetworkTools.swift in Sources */,
 				BD32795424C1706B008D9343 /* UIBarBtnItem-Extension.swift in Sources */,
 				BD68BCB524C416A00005F31C /* RecommentViewModel.swift in Sources */,
 			);
@@ -767,18 +771,20 @@
 			baseConfigurationReference = 2CAD181BF5A11D974DB470C4 /* Pods-DouYuZhiBo_new.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R34V3NML7Y;
 				INFOPLIST_FILE = DouYuZhiBo_new/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.lepu.test.DouYuZhiBo-new";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.creative.Health-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -787,18 +793,20 @@
 			baseConfigurationReference = 3149CBFDFFCA3386D9232924 /* Pods-DouYuZhiBo_new.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R34V3NML7Y;
 				INFOPLIST_FILE = DouYuZhiBo_new/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.lepu.test.DouYuZhiBo-new";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.creative.Health-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
