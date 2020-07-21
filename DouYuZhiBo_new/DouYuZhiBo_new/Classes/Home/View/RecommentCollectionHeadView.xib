@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RecommendVCkNormalHeaderID" id="U6b-Vx-4bR">
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RecommendVCkNormalHeaderID" id="U6b-Vx-4bR" customClass="RecommentCollectionHeadView" customModule="DouYuZhiBo_new" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
@@ -58,6 +57,10 @@
                 <constraint firstItem="iyM-YL-TgN" firstAttribute="top" secondItem="06I-Vb-gvd" secondAttribute="bottom" constant="11" id="yhD-nV-xRA"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <connections>
+                <outlet property="iconimgView" destination="iyM-YL-TgN" id="fvZ-KC-5Pi"/>
+                <outlet property="titleLabel" destination="zjS-1C-iUG" id="Pl6-gu-IRw"/>
+            </connections>
             <point key="canvasLocation" x="131.8840579710145" y="102.45535714285714"/>
         </collectionReusableView>
     </objects>

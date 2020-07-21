@@ -10,9 +10,25 @@ import UIKit
 
 class RecommentCollectionHeadView: UICollectionReusableView {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var iconimgView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    
+    var group : AnchorGroup? {
+        didSet{
+            titleLabel.text = group?.tag_name
+            iconimgView.image = UIImage(named: group?.icon_name ?? "home_header_normal")
+        }
+    }
+    
+    
+    
+}
+
+//MARK: - 快速创建的类方法
+extension RecommentCollectionHeadView {
+    class func recommentCollectionHeadView() -> RecommentCollectionHeadView {
+        return Bundle.main.loadNibNamed("RecommentCollectionHeadView", owner: nil, options: nil)?.first as! RecommentCollectionHeadView
     }
     
 }

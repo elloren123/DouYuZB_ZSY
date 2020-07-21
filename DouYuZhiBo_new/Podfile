@@ -6,5 +6,6 @@ target 'DouYuZhiBo_new' do
   use_frameworks!
 
 pod 'Alamofire'
+pod 'HandyJSON'
 
 end

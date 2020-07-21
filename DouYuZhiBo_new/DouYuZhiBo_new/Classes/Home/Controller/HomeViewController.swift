@@ -9,7 +9,7 @@
  */
 
 import UIKit
-import Alamofire
+
 private let kTitleViewH:CGFloat = 40
 
 class HomeViewController: UIViewController {
@@ -47,22 +47,8 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         //设置UI
-//        setupUI()
-        
-        let url = "http://capi.douyucdn.cn/api/v1/getHotCate?limit=4&offset=0&time=1474252024"
-                      //原生
-              //        let session = URLSession(configuration: .default)
-              //        let request = URLRequest(url: URL(string: url)!)
-              //        let task = session.dataTask(with: request) { (data, response, error) in
-              //            print(String(bytes: data!, encoding: .utf8)!)
-              //        }
-              //        task.resume()
-              //        //Alamofire
-              
-                      AF.request(url).responseJSON{ (response) in
-                          print(response)
-                      }
-        
+        setupUI()
+       
     }
     
 

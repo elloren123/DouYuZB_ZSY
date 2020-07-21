@@ -35,6 +35,8 @@
 		BD68BCB524C416A00005F31C /* RecommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD68BCB424C416A00005F31C /* RecommentViewModel.swift */; };
 		BD68BCB724C41C340005F31C /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD68BCB624C41C340005F31C /* NSDate-Extension.swift */; };
 		BD68BCB924C438400005F31C /* AnchorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD68BCB824C438400005F31C /* AnchorGroup.swift */; };
+		BD68BDB024C696430005F31C /* NetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD68BDAF24C696430005F31C /* NetworkTool.swift */; };
+		BD68BDB624C6CEB00005F31C /* RoomAnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD68BDB524C6CEB00005F31C /* RoomAnchorModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +93,8 @@
 		BD68BCB424C416A00005F31C /* RecommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommentViewModel.swift; sourceTree = "<group>"; };
 		BD68BCB624C41C340005F31C /* NSDate-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
 		BD68BCB824C438400005F31C /* AnchorGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorGroup.swift; sourceTree = "<group>"; };
+		BD68BDAF24C696430005F31C /* NetworkTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTool.swift; sourceTree = "<group>"; };
+		BD68BDB524C6CEB00005F31C /* RoomAnchorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomAnchorModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +222,7 @@
 			children = (
 				BD32795224C1701B008D9343 /* Extension */,
 				BD32795724C17FC0008D9343 /* Common.swift */,
+				BD68BDAF24C696430005F31C /* NetworkTool.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -359,6 +364,7 @@
 			isa = PBXGroup;
 			children = (
 				BD68BCB824C438400005F31C /* AnchorGroup.swift */,
+				BD68BDB524C6CEB00005F31C /* RoomAnchorModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -587,6 +593,7 @@
 				BD32795624C17CF4008D9343 /* PageTitleVIew.swift in Sources */,
 				BD32796024C2BFA1008D9343 /* RecommendViewController.swift in Sources */,
 				BD3278BD24C044EE008D9343 /* SceneDelegate.swift in Sources */,
+				BD68BDB024C696430005F31C /* NetworkTool.swift in Sources */,
 				BD68BCB924C438400005F31C /* AnchorGroup.swift in Sources */,
 				BD32795C24C192F8008D9343 /* UIColor_Extension.swift in Sources */,
 				BD32796B24C2E514008D9343 /* CollectionBeautifulCell.swift in Sources */,
@@ -597,6 +604,7 @@
 				BD68BCB724C41C340005F31C /* NSDate-Extension.swift in Sources */,
 				BD32795824C17FC0008D9343 /* Common.swift in Sources */,
 				BD32795424C1706B008D9343 /* UIBarBtnItem-Extension.swift in Sources */,
+				BD68BDB624C6CEB00005F31C /* RoomAnchorModel.swift in Sources */,
 				BD68BCB524C416A00005F31C /* RecommentViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
