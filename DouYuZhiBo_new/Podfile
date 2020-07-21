@@ -7,5 +7,6 @@ target 'DouYuZhiBo_new' do
 
 pod 'Alamofire'
 pod 'HandyJSON'
+pod 'Kingfisher'
 
 end
