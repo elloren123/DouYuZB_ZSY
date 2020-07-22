@@ -15,7 +15,8 @@ private let kItemW : CGFloat = (kScreenW - kItemMargin * 3)/2
 private let kNormalItemH : CGFloat = kItemW * 3 / 4
 private let kBueautifulItemH : CGFloat = kItemW * 4 / 3
 private let kHeaderH : CGFloat = 50
-private let kCycleViewH = kScreenW * 3 / 8
+private let kCycleViewH : CGFloat = kScreenW * 3 / 8
+private let kGameViewH : CGFloat = 90
 private let kNormalCellID = "RecommendVCkNormalCellID"
 private let kBueautifulCellID = "RecommendVCkBueautifulCellID"
 private let kNormalHeaderID = "RecommendVCkNormalHeaderID"
@@ -61,9 +62,15 @@ class RecommendViewController: UIViewController {
     }()
     private lazy var cycleView:RecommentCycleView = {
         let cycleV = RecommentCycleView.recommentCycleView()
-        cycleV.frame = CGRect(x: 0, y: -kCycleViewH, width: kScreenW, height: kCycleViewH)
+        cycleV.frame = CGRect(x: 0, y: -(kCycleViewH+kGameViewH), width: kScreenW, height: kCycleViewH)
         return cycleV
     }()
+    private lazy var gameView:RecommentGameView = {
+        let gameV = RecommentGameView.recommentGameView()
+        gameV.frame = CGRect(x: 0, y: -kGameViewH, width: kScreenW, height: kGameViewH)
+        return gameV
+    }()
+    
     
     //MARK: - 系统回调函数
     override func viewDidLoad() {
@@ -82,7 +89,8 @@ extension RecommendViewController {
     private func setupUI(){
         view.addSubview(collectionView)
         collectionView.addSubview(cycleView)
-        collectionView.contentInset = UIEdgeInsets(top: kCycleViewH, left: 0, bottom: 0, right: 0)
+        collectionView.addSubview(gameView)
+        collectionView.contentInset = UIEdgeInsets(top: kCycleViewH + kGameViewH, left: 0, bottom: 0, right: 0)
     }
     
 }
@@ -93,6 +101,16 @@ extension RecommendViewController {
         //请求推荐数据
         recommentVM.requestData {
             self.collectionView.reloadData()
+            var allAnchorGroups = self.recommentVM.anchorGroups
+            //移除第一第二个,从第三个到底12个展示
+            allAnchorGroups.removeFirst()
+            allAnchorGroups.removeFirst()
+            //添加一组,更多
+            let moreGroup:AnchorGroup = AnchorGroup()
+            moreGroup.tag_name = "更多"
+            allAnchorGroups.append(moreGroup)
+            
+            self.gameView.anchorGroup = allAnchorGroups
             
         }
         //请求轮播数据

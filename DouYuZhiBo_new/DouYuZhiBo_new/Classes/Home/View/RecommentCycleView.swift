@@ -4,7 +4,9 @@
 //
 //  Created by LEPU on 2020/7/21.
 //  Copyright © 2020 LEPU. All rights reserved.
-//
+/*
+ 推荐的轮播图
+ */
 
 import UIKit
 
