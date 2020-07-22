@@ -28,9 +28,9 @@ class NetworkTool {
                 let statusCode = response.response?.statusCode
                 debugPrint("\(statusCode ?? 0)请求失败")
             }
-            
+          
         }
-        
+       
     }
     
     /// JSONString转换为字典
