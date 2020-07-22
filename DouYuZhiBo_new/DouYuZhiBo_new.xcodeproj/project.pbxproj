@@ -39,6 +39,8 @@
 		BD68BDB624C6CEB00005F31C /* RoomAnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD68BDB524C6CEB00005F31C /* RoomAnchorModel.swift */; };
 		BD68BDB824C6EA210005F31C /* RecommentCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD68BDB724C6EA210005F31C /* RecommentCycleView.swift */; };
 		BD68BDBA24C6EA3C0005F31C /* RecommentCycleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD68BDB924C6EA3C0005F31C /* RecommentCycleView.xib */; };
+		BD68BDBD24C7C1D90005F31C /* RecommentCycleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD68BDBB24C7C1D90005F31C /* RecommentCycleViewCell.swift */; };
+		BD68BDBE24C7C1D90005F31C /* RecommentCycleViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD68BDBC24C7C1D90005F31C /* RecommentCycleViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +101,8 @@
 		BD68BDB524C6CEB00005F31C /* RoomAnchorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomAnchorModel.swift; sourceTree = "<group>"; };
 		BD68BDB724C6EA210005F31C /* RecommentCycleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommentCycleView.swift; sourceTree = "<group>"; };
 		BD68BDB924C6EA3C0005F31C /* RecommentCycleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommentCycleView.xib; sourceTree = "<group>"; };
+		BD68BDBB24C7C1D90005F31C /* RecommentCycleViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommentCycleViewCell.swift; sourceTree = "<group>"; };
+		BD68BDBC24C7C1D90005F31C /* RecommentCycleViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommentCycleViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -299,6 +303,8 @@
 				BD32796224C2D692008D9343 /* RecommentCollectionHeadView.xib */,
 				BD68BDB724C6EA210005F31C /* RecommentCycleView.swift */,
 				BD68BDB924C6EA3C0005F31C /* RecommentCycleView.xib */,
+				BD68BDBB24C7C1D90005F31C /* RecommentCycleViewCell.swift */,
+				BD68BDBC24C7C1D90005F31C /* RecommentCycleViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -519,6 +525,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD68BDBE24C7C1D90005F31C /* RecommentCycleViewCell.xib in Resources */,
 				BD32795E24C2BF8B008D9343 /* Home.storyboard in Resources */,
 				BD68BDBA24C6EA3C0005F31C /* RecommentCycleView.xib in Resources */,
 				BD3278C724C044EF008D9343 /* LaunchScreen.storyboard in Resources */,
@@ -612,6 +619,7 @@
 				BD32795824C17FC0008D9343 /* Common.swift in Sources */,
 				BD32795424C1706B008D9343 /* UIBarBtnItem-Extension.swift in Sources */,
 				BD68BDB624C6CEB00005F31C /* RoomAnchorModel.swift in Sources */,
+				BD68BDBD24C7C1D90005F31C /* RecommentCycleViewCell.swift in Sources */,
 				BD68BDB824C6EA210005F31C /* RecommentCycleView.swift in Sources */,
 				BD68BCB524C416A00005F31C /* RecommentViewModel.swift in Sources */,
 			);

@@ -51,6 +51,7 @@ class RecommendViewController: UIViewController {
         collectionView.register(UINib(nibName: "CollectionViewNormalCell", bundle: nil), forCellWithReuseIdentifier: kNormalCellID)
         collectionView.register(UINib(nibName: "CollectionBeautifulCell", bundle: nil), forCellWithReuseIdentifier: kBueautifulCellID)
         
+        
         //注册Header
 //         collectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: kNormalHeaderID)
         //注册Header-->XIB
@@ -112,7 +113,6 @@ extension RecommendViewController:UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         
         if indexPath.section == 1 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kBueautifulCellID, for: indexPath) as! CollectionBeautifulCell

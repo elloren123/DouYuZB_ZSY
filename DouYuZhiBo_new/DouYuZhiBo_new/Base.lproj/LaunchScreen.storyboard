@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -23,21 +22,55 @@
                                     <constraint firstAttribute="height" constant="300" id="qSC-Mw-a3X"/>
                                 </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OO2-5W-4DS">
+                                <rect key="frame" x="147" y="796" width="120" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="每个人的直播平台" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVJ-9l-hgo">
+                                        <rect key="frame" x="0.0" y="66" width="120" height="14"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="14" id="Ecf-IR-Tmx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_star_bottom" translatesAutoresizingMaskIntoConstraints="NO" id="aoB-Zz-1Ka">
+                                        <rect key="frame" x="28.5" y="0.0" width="63" height="61"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="aoB-Zz-1Ka" secondAttribute="height" multiplier="65:63" id="8WN-sI-h0a"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="qVJ-9l-hgo" firstAttribute="leading" secondItem="OO2-5W-4DS" secondAttribute="leading" id="2qq-ru-mTp"/>
+                                    <constraint firstItem="aoB-Zz-1Ka" firstAttribute="centerX" secondItem="OO2-5W-4DS" secondAttribute="centerX" id="VCw-Tg-Vn8"/>
+                                    <constraint firstAttribute="trailing" secondItem="qVJ-9l-hgo" secondAttribute="trailing" id="VYm-qn-mMA"/>
+                                    <constraint firstAttribute="width" constant="120" id="eSo-wD-Qo4"/>
+                                    <constraint firstAttribute="bottom" secondItem="qVJ-9l-hgo" secondAttribute="bottom" id="eXD-h5-U0D"/>
+                                    <constraint firstItem="qVJ-9l-hgo" firstAttribute="centerX" secondItem="OO2-5W-4DS" secondAttribute="centerX" id="ehA-XZ-Ngb"/>
+                                    <constraint firstAttribute="height" constant="80" id="eyT-Lj-aPf"/>
+                                    <constraint firstItem="qVJ-9l-hgo" firstAttribute="top" secondItem="aoB-Zz-1Ka" secondAttribute="bottom" constant="5" id="n0s-wa-thx"/>
+                                    <constraint firstItem="aoB-Zz-1Ka" firstAttribute="top" secondItem="OO2-5W-4DS" secondAttribute="top" id="p5g-3t-uYW"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="n1l-iC-vLV" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="A5m-La-Tds"/>
+                            <constraint firstItem="OO2-5W-4DS" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Jo2-vt-DpZ"/>
                             <constraint firstItem="n1l-iC-vLV" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Y7o-yH-UxJ"/>
+                            <constraint firstAttribute="bottom" secondItem="OO2-5W-4DS" secondAttribute="bottom" constant="20" id="z16-ve-Wvn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
     <resources>
+        <image name="app_star_bottom" width="80" height="80"/>
         <image name="app_start_top" width="1346" height="1346"/>
     </resources>
 </document>
