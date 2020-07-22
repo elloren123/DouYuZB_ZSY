@@ -41,6 +41,7 @@
 		BD68BDBA24C6EA3C0005F31C /* RecommentCycleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD68BDB924C6EA3C0005F31C /* RecommentCycleView.xib */; };
 		BD68BDBD24C7C1D90005F31C /* RecommentCycleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD68BDBB24C7C1D90005F31C /* RecommentCycleViewCell.swift */; };
 		BD68BDBE24C7C1D90005F31C /* RecommentCycleViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD68BDBC24C7C1D90005F31C /* RecommentCycleViewCell.xib */; };
+		BD68BE0424C806EB0005F31C /* RecommentCycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD68BE0324C806EB0005F31C /* RecommentCycleModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		BD68BDB924C6EA3C0005F31C /* RecommentCycleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommentCycleView.xib; sourceTree = "<group>"; };
 		BD68BDBB24C7C1D90005F31C /* RecommentCycleViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommentCycleViewCell.swift; sourceTree = "<group>"; };
 		BD68BDBC24C7C1D90005F31C /* RecommentCycleViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommentCycleViewCell.xib; sourceTree = "<group>"; };
+		BD68BE0324C806EB0005F31C /* RecommentCycleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommentCycleModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,6 +284,7 @@
 		BD32793E24C147E9008D9343 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BD68BE0324C806EB0005F31C /* RecommentCycleModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -606,6 +609,7 @@
 				BD3278BB24C044EE008D9343 /* AppDelegate.swift in Sources */,
 				BD32795624C17CF4008D9343 /* PageTitleVIew.swift in Sources */,
 				BD32796024C2BFA1008D9343 /* RecommendViewController.swift in Sources */,
+				BD68BE0424C806EB0005F31C /* RecommentCycleModel.swift in Sources */,
 				BD3278BD24C044EE008D9343 /* SceneDelegate.swift in Sources */,
 				BD68BDB024C696430005F31C /* NetworkTool.swift in Sources */,
 				BD68BCB924C438400005F31C /* AnchorGroup.swift in Sources */,
@@ -804,7 +808,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.creative.Health-Test";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.creative.Health-T";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -826,7 +830,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.creative.Health-Test";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.creative.Health-T";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;

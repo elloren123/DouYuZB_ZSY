@@ -14,6 +14,14 @@ class RecommentCycleViewCell: UICollectionViewCell {
     @IBOutlet weak var iconImgView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     
+    var cycleModel: RecommentCycleModel? {
+        didSet {
+            titleLabel.text = cycleModel?.title
+            guard let imgURL = URL(string: cycleModel?.pic_url ?? "") else{return}
+            iconImgView.kf.setImage(with: imgURL)
+            
+        }
+    }
     
     
 

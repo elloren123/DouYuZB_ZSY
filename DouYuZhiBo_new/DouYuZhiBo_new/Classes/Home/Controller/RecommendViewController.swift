@@ -95,7 +95,11 @@ extension RecommendViewController {
             self.collectionView.reloadData()
             
         }
-    
+        //请求轮播数据
+        recommentVM.reloadCycleData {
+            self.cycleView.cycleModels = self.recommentVM.cycleModels
+        }
+        
     }
     
 }

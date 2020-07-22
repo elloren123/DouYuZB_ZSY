@@ -21,6 +21,8 @@ class RecommentViewModel {
     //颜值
     fileprivate lazy var prettyGroup : AnchorGroup = AnchorGroup()
     
+    lazy var cycleModels : [RecommentCycleModel] = [RecommentCycleModel]()
+    
 }
 
 //MARK: - 发送网络请求
@@ -109,5 +111,33 @@ extension RecommentViewModel {
         }
 
     }
+    
+    //请求轮播数据
+    
+    func reloadCycleData(_ finishCallback:@escaping () -> () ){
+        let cycleURL = "http://www.douyutv.com/api/v1/slide/6"
+        let parameters = ["version":"2.300"]
+        NetworkTool.reloadData(.Get, cycleURL,paramsters: parameters) { (response) in
+            let json = String(data: response as! Data, encoding: String.Encoding.utf8)
+            let dict:NSDictionary =  NetworkTool.getDictionaryFromJSONString(jsonString: json ?? "")
+            guard let dataArray = dict["data"] as? [[String : Any]] else { return }
+            
+            for diction in dataArray {
+                let model = RecommentCycleModel.deserialize(from: diction)
+                
+                guard let room = diction["room"] as? [String : Any] else { return }
+               
+                let roomModel = RoomAnchorModel.deserialize(from: room)
+                model?.anchors = roomModel!
+                
+                self.cycleModels.append(model!)
+            }
+            
+            finishCallback()
+        }
+        
+        
+    }
+    
 }
 
