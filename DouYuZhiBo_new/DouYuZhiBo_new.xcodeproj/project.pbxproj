@@ -37,6 +37,8 @@
 		BD68BCB924C438400005F31C /* AnchorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD68BCB824C438400005F31C /* AnchorGroup.swift */; };
 		BD68BDB024C696430005F31C /* NetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD68BDAF24C696430005F31C /* NetworkTool.swift */; };
 		BD68BDB624C6CEB00005F31C /* RoomAnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD68BDB524C6CEB00005F31C /* RoomAnchorModel.swift */; };
+		BD68BDB824C6EA210005F31C /* RecommentCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD68BDB724C6EA210005F31C /* RecommentCycleView.swift */; };
+		BD68BDBA24C6EA3C0005F31C /* RecommentCycleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD68BDB924C6EA3C0005F31C /* RecommentCycleView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,8 @@
 		BD68BCB824C438400005F31C /* AnchorGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorGroup.swift; sourceTree = "<group>"; };
 		BD68BDAF24C696430005F31C /* NetworkTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTool.swift; sourceTree = "<group>"; };
 		BD68BDB524C6CEB00005F31C /* RoomAnchorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomAnchorModel.swift; sourceTree = "<group>"; };
+		BD68BDB724C6EA210005F31C /* RecommentCycleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommentCycleView.swift; sourceTree = "<group>"; };
+		BD68BDB924C6EA3C0005F31C /* RecommentCycleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommentCycleView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,6 +297,8 @@
 			children = (
 				BD32796124C2D692008D9343 /* RecommentCollectionHeadView.swift */,
 				BD32796224C2D692008D9343 /* RecommentCollectionHeadView.xib */,
+				BD68BDB724C6EA210005F31C /* RecommentCycleView.swift */,
+				BD68BDB924C6EA3C0005F31C /* RecommentCycleView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -514,6 +520,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD32795E24C2BF8B008D9343 /* Home.storyboard in Resources */,
+				BD68BDBA24C6EA3C0005F31C /* RecommentCycleView.xib in Resources */,
 				BD3278C724C044EF008D9343 /* LaunchScreen.storyboard in Resources */,
 				BD3278C424C044EF008D9343 /* Assets.xcassets in Resources */,
 				BD32796C24C2E514008D9343 /* CollectionBeautifulCell.xib in Resources */,
@@ -605,6 +612,7 @@
 				BD32795824C17FC0008D9343 /* Common.swift in Sources */,
 				BD32795424C1706B008D9343 /* UIBarBtnItem-Extension.swift in Sources */,
 				BD68BDB624C6CEB00005F31C /* RoomAnchorModel.swift in Sources */,
+				BD68BDB824C6EA210005F31C /* RecommentCycleView.swift in Sources */,
 				BD68BCB524C416A00005F31C /* RecommentViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

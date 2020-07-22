@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Kingfisher
 class CollectionViewNormalCell: UICollectionViewCell {
     //MARK: - 属性
    
@@ -31,7 +31,10 @@ class CollectionViewNormalCell: UICollectionViewCell {
             onlineBtn.setTitle(onlineNum, for: .normal)
             
             nickNameLabel.text = anchor?.nickname
-//            iconImageVIew
+            guard let url =  URL(string: anchor?.vertical_src ?? "") else {
+                return
+            }
+            iconImageVIew.kf.setImage(with:url)
         }
     }
     

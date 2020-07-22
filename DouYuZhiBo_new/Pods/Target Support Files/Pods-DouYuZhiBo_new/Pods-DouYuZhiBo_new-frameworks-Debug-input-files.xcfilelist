@@ -1,3 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-DouYuZhiBo_new/Pods-DouYuZhiBo_new-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
 ${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework
+${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework
