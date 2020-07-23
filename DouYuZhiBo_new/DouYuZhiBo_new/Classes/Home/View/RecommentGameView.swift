@@ -16,7 +16,7 @@ class RecommentGameView: UIView {
     //MARK: - 属性
     @IBOutlet weak var collectionView: UICollectionView!
     //数据源
-    var anchorGroup :[AnchorGroup]? {
+    var anchorGroup :[BaseModel]? {
         didSet{
             collectionView.reloadData()
             

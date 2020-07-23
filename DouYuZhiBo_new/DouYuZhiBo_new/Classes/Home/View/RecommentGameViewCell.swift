@@ -13,7 +13,7 @@ class RecommentGameViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var iconImgView: UIImageView!
     
-    var anchor :AnchorGroup? {
+    var anchor :BaseModel? {
         didSet {
             titleLabel.text = anchor?.tag_name
             //用""创建 URL会为 nil
@@ -27,6 +27,13 @@ class RecommentGameViewCell: UICollectionViewCell {
         }
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        //图片太恶心,只能这样子了
+        iconImgView.layer.borderWidth = 0.5
+        iconImgView.layer.borderColor = UIColor.gray.cgColor
+        
+    }
     
     
 
