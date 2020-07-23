@@ -93,6 +93,7 @@ extension PageContentView:UICollectionViewDataSource{
         }
         
         let childVC = childVCs[indexPath.item]
+        print(" 当前被加载的VC ===  \(childVC.self)")
         childVC.view.frame = cell.contentView.bounds
         cell.contentView.addSubview(childVC.view)
         return cell

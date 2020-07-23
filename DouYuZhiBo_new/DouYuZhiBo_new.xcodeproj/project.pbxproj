@@ -46,6 +46,9 @@
 		BD68BE0824C81A530005F31C /* RecommentGameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD68BE0724C81A530005F31C /* RecommentGameView.xib */; };
 		BD68BE0B24C820C40005F31C /* RecommentGameViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD68BE0924C820C40005F31C /* RecommentGameViewCell.swift */; };
 		BD68BE0C24C820C40005F31C /* RecommentGameViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD68BE0A24C820C40005F31C /* RecommentGameViewCell.xib */; };
+		BD68BE1224C858110005F31C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD68BE1124C858110005F31C /* GameViewController.swift */; };
+		BD68BE1424C929B30005F31C /* AmuseMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD68BE1324C929B30005F31C /* AmuseMenuView.swift */; };
+		BD68BE1624C929CD0005F31C /* AmuseMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD68BE1524C929CD0005F31C /* AmuseMenuView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +116,9 @@
 		BD68BE0724C81A530005F31C /* RecommentGameView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommentGameView.xib; sourceTree = "<group>"; };
 		BD68BE0924C820C40005F31C /* RecommentGameViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommentGameViewCell.swift; sourceTree = "<group>"; };
 		BD68BE0A24C820C40005F31C /* RecommentGameViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommentGameViewCell.xib; sourceTree = "<group>"; };
+		BD68BE1124C858110005F31C /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		BD68BE1324C929B30005F31C /* AmuseMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmuseMenuView.swift; sourceTree = "<group>"; };
+		BD68BE1524C929CD0005F31C /* AmuseMenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AmuseMenuView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -303,6 +309,7 @@
 				BD32795D24C2BF8B008D9343 /* Home.storyboard */,
 				BD32795024C14BA6008D9343 /* HomeViewController.swift */,
 				BD32795F24C2BFA1008D9343 /* RecommendViewController.swift */,
+				BD68BE1124C858110005F31C /* GameViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -320,6 +327,8 @@
 				BD68BE0724C81A530005F31C /* RecommentGameView.xib */,
 				BD68BE0924C820C40005F31C /* RecommentGameViewCell.swift */,
 				BD68BE0A24C820C40005F31C /* RecommentGameViewCell.xib */,
+				BD68BE1324C929B30005F31C /* AmuseMenuView.swift */,
+				BD68BE1524C929CD0005F31C /* AmuseMenuView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -548,6 +557,7 @@
 				BD3278C424C044EF008D9343 /* Assets.xcassets in Resources */,
 				BD32796C24C2E514008D9343 /* CollectionBeautifulCell.xib in Resources */,
 				BD68BE0C24C820C40005F31C /* RecommentGameViewCell.xib in Resources */,
+				BD68BE1624C929CD0005F31C /* AmuseMenuView.xib in Resources */,
 				BD32796424C2D692008D9343 /* RecommentCollectionHeadView.xib in Resources */,
 				BD3278C224C044EE008D9343 /* Main.storyboard in Resources */,
 				BD32796824C2DC41008D9343 /* CollectionViewNormalCell.xib in Resources */,
@@ -634,8 +644,10 @@
 				BD32795124C14BA6008D9343 /* HomeViewController.swift in Sources */,
 				BD32796324C2D692008D9343 /* RecommentCollectionHeadView.swift in Sources */,
 				BD68BCB724C41C340005F31C /* NSDate-Extension.swift in Sources */,
+				BD68BE1224C858110005F31C /* GameViewController.swift in Sources */,
 				BD32795824C17FC0008D9343 /* Common.swift in Sources */,
 				BD68BE0B24C820C40005F31C /* RecommentGameViewCell.swift in Sources */,
+				BD68BE1424C929B30005F31C /* AmuseMenuView.swift in Sources */,
 				BD32795424C1706B008D9343 /* UIBarBtnItem-Extension.swift in Sources */,
 				BD68BDB624C6CEB00005F31C /* RoomAnchorModel.swift in Sources */,
 				BD68BDBD24C7C1D90005F31C /* RecommentCycleViewCell.swift in Sources */,

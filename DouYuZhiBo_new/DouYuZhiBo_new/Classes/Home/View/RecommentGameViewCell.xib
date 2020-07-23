@@ -17,19 +17,19 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="英雄联盟" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YYU-qT-SAB">
-                        <rect key="frame" x="0.0" y="71" width="80" height="14"/>
+                        <rect key="frame" x="0.0" y="66" width="80" height="14"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="14" id="EMb-uc-WBI"/>
+                            <constraint firstAttribute="height" constant="14" id="C75-QR-9zD"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="live_cell_default_phone" translatesAutoresizingMaskIntoConstraints="NO" id="qIl-LI-DbV">
-                        <rect key="frame" x="17.5" y="15" width="45" height="45"/>
+                        <rect key="frame" x="17.5" y="14.5" width="45" height="45"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="45" id="nGE-ZH-ApM"/>
-                            <constraint firstAttribute="width" constant="45" id="o6J-eZ-jtA"/>
+                            <constraint firstAttribute="height" constant="45" id="2ha-Z3-Qlc"/>
+                            <constraint firstAttribute="width" constant="45" id="Q99-J7-Won"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
@@ -42,11 +42,11 @@
             </view>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="YYU-qT-SAB" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="9Hf-y1-lFA"/>
-                <constraint firstAttribute="trailing" secondItem="YYU-qT-SAB" secondAttribute="trailing" id="dvS-4Z-dbr"/>
-                <constraint firstAttribute="bottom" secondItem="YYU-qT-SAB" secondAttribute="bottom" constant="5" id="e8w-Bz-gbi"/>
-                <constraint firstItem="qIl-LI-DbV" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="h3K-p9-tIl"/>
-                <constraint firstItem="qIl-LI-DbV" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="wgW-KH-gn0"/>
+                <constraint firstItem="qIl-LI-DbV" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" constant="-8" id="I2I-gX-zYv"/>
+                <constraint firstAttribute="bottom" secondItem="YYU-qT-SAB" secondAttribute="bottom" constant="10" id="Jpe-kj-ZYP"/>
+                <constraint firstItem="YYU-qT-SAB" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="e5x-sE-rQ9"/>
+                <constraint firstAttribute="trailing" secondItem="YYU-qT-SAB" secondAttribute="trailing" id="soZ-HP-Mr7"/>
+                <constraint firstItem="qIl-LI-DbV" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="uAY-2y-r9X"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>

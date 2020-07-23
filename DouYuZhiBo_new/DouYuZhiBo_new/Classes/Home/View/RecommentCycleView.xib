@@ -49,7 +49,7 @@
                 <outlet property="collectionview" destination="Bec-g5-gIY" id="PUh-Jz-KJe"/>
                 <outlet property="pageController" destination="t6Q-xX-Elq" id="OX5-jJ-oud"/>
             </connections>
-            <point key="canvasLocation" x="298.55072463768118" y="-168.41517857142856"/>
+            <point key="canvasLocation" x="-107" y="-199"/>
         </view>
     </objects>
 </document>

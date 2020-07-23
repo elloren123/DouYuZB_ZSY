@@ -12,7 +12,7 @@ class RecommentCollectionHeadView: UICollectionReusableView {
 
     @IBOutlet weak var iconimgView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
-    
+    @IBOutlet weak var moreBtn: UIButton!
     
     var group : AnchorGroup? {
         didSet{

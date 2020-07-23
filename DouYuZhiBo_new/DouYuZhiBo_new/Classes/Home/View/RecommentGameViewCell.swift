@@ -16,6 +16,7 @@ class RecommentGameViewCell: UICollectionViewCell {
     var anchor :AnchorGroup? {
         didSet {
             titleLabel.text = anchor?.tag_name
+            //用""创建 URL会为 nil
             if let url = URL(string: anchor?.icon_url ?? "") {
                 iconImgView.kf.setImage(with: url)
             }else{

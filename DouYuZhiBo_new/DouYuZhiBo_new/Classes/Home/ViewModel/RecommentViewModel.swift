@@ -91,7 +91,7 @@ extension RecommentViewModel {
             
             for diction in dataArray {
                 let model = AnchorGroup.deserialize(from: diction)
-                print(model?.tag_name as Any)
+                
                 guard let roomList = diction["room_list"] as? [[String : Any]] else { return }
                 for roomDic in roomList{
                     let roomModel = RoomAnchorModel.deserialize(from: roomDic)
