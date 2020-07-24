@@ -35,11 +35,7 @@ class HomeViewController: UIViewController {
         childVCs.append(GameViewController())//添加游戏VC
         childVCs.append(AmuseViewController())
         childVCs.append(FunnyViewController())
-//        for _ in 0..<1{
-//            let vc = UIViewController()
-//            vc.view.backgroundColor = UIColor(R: CGFloat(arc4random_uniform(255)), G: CGFloat(arc4random_uniform(255)), B: CGFloat(arc4random_uniform(255)))
-//            childVCs.append(vc)
-//        }
+
         let contentView = PageContentView(frame: contentFrame, chileVCs: childVCs, parentVC: self)
         contentView.delegate = self
         return contentView

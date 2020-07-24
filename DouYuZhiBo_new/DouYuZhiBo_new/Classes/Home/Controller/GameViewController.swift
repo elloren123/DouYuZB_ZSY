@@ -12,8 +12,8 @@ import UIKit
 
 private let kEdgeMargin : CGFloat = 10 //这个是collectionview距离两侧的内边距
 
-private let kItemW : CGFloat = (kScreenW - 2 * kEdgeMargin) / 3
-private let kItemH : CGFloat = kItemW    // * 6 / 5
+private let kGameItemW : CGFloat = (kScreenW - 2 * kEdgeMargin) / 3
+private let kItemH : CGFloat = kGameItemW    // * 6 / 5
 private let kHeaderViewH : CGFloat = 50
 private let kGameViewH : CGFloat = 90
 
@@ -33,7 +33,7 @@ class GameViewController: UIViewController {
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
-        layout.itemSize = CGSize(width: kItemW, height: kItemH)
+        layout.itemSize = CGSize(width: kGameItemW, height: kItemH)
         //设置组头大小
         layout.headerReferenceSize = CGSize(width: kScreenW, height: kHeaderViewH)
         //给layout设置组的内边距

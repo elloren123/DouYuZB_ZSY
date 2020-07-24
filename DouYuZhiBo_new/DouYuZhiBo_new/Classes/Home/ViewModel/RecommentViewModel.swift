@@ -8,12 +8,12 @@
 
 import UIKit
 import Alamofire
-class RecommentViewModel {
+class RecommentViewModel:BaseViewModel {
     //MARK: - 懒加载属性
     //??? fileprivate 是什么意思? TODO
     
     //组的信息 (推荐 + 颜值 + 游戏)
-    lazy var anchorGroups : [AnchorGroup] = [AnchorGroup]()
+//    lazy var anchorGroups : [AnchorGroup] = [AnchorGroup]()
     
     //推荐
     fileprivate lazy var bigDataGroup : AnchorGroup = AnchorGroup()
