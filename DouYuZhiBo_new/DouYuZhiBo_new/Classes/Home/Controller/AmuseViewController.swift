@@ -84,7 +84,7 @@ extension AmuseViewController {
 //MARK: - 加载数据源
 extension AmuseViewController {
     func reloadData(){
-        amuseVM.reloadData {
+        amuseVM.reloadAmuseData {
             
             self.collectionView.reloadData()
             
