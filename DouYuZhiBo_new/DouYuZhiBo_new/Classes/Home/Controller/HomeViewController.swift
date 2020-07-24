@@ -11,6 +11,8 @@
 import UIKit
 
 private let kTitleViewH:CGFloat = 40
+// 记录导航栏是否隐藏
+private var isNavHidden : Bool = false
 
 class HomeViewController: UIViewController {
 
@@ -48,6 +50,9 @@ class HomeViewController: UIViewController {
         //设置UI
         setupUI()
        
+        //监听通知
+        NotificationCenter.default.addObserver(self, selector: #selector(self.navigationHiddenShow(noti:)), name: NSNotification.Name(rawValue: kNavigationHiddenNofitication), object: nil)
+        
     }
     
 
@@ -58,7 +63,15 @@ class HomeViewController: UIViewController {
 extension HomeViewController {
     private func setupUI(){
         //MARK: - 有导航栏,scrollView会默认添加64的内边距,我们不需要,去除
-        automaticallyAdjustsScrollViewInsets = false
+//        automaticallyAdjustsScrollViewInsets = false
+//        if #available(iOS 11, *) {
+//            myScroll.contentInsetAdjustmentBehavior = .never
+//        } else {
+//            self.automaticallyAdjustsScrollViewInsets = false
+//        }
+        
+        
+        
         
         //设置导航栏
         setNavigationBar()
@@ -99,6 +112,48 @@ extension HomeViewController:PageTitleVIewDelegate {
 extension HomeViewController:PageContentViewDelegate {
     func PageContentViewScroll(contentView: PageContentView, progress: CGFloat, sourceIndex: Int, targetIndex: Int) {
         pageTitleView.setCurrentIndex(progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
+    }
+    
+}
+
+//MARK: - 通知
+extension HomeViewController {
+    @objc func navigationHiddenShow(noti:Notification){
+        
+        let isHidden : String = noti.userInfo!["navHidden"] as! String
+        if isHidden == "true" {
+            //1.已经隐藏,则不需要操作
+            if isNavHidden { return }
+            //2.进行隐藏
+            isNavHidden = true
+            
+            self.navigationController?.setNavigationBarHidden(true, animated: true)
+            
+            UIView.animate(withDuration: 0.25) {
+                //1移动pageTitleView
+                self.pageTitleView.frame = CGRect(x: 0, y: kStatusBarH, width: kScreenW, height: kTitleViewH)
+                //2移动pageContenView,同时更改pageContenView的frame大小
+                let contentH = kScreenH - kStatusBarH  - kTitleViewH - kTabBarH
+                let contentFrame = CGRect(x: 0, y: kStatusBarH + kTitleViewH, width: kScreenW, height: contentH)
+                self.pageContentView.frame = contentFrame
+                //3更新pageContentView中的collectionView和item大小
+                self.pageContentView.refshUI()
+
+            }
+        }else{
+            if !isNavHidden { return }
+            isNavHidden = false
+            self.navigationController?.setNavigationBarHidden(false, animated: true)
+            UIView.animate(withDuration: 0.25) {
+                self.pageTitleView.frame = CGRect(x: 0, y: CGFloat(kStatusBarH + kNavigationBar), width: kScreenW, height: kTitleViewH)
+                
+                let contentH = kScreenH - kStatusBarH - kNavigationBar - kTitleViewH - kTabBarH
+                let contentFrame = CGRect(x: 0, y: kStatusBarH + kNavigationBar + kTitleViewH, width: kScreenW, height: contentH)
+                self.pageContentView.frame = contentFrame
+            }
+           
+        }
+
     }
     
 }

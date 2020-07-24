@@ -28,7 +28,7 @@ class PageContentView: UIView {
     private var isForbidScrollDelegate:Bool = false
     
     //MARK: - 懒加载
-    private lazy var collectionVIew:UICollectionView = {[weak self] in
+    fileprivate lazy var collectionVIew:UICollectionView = {[weak self] in
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = (self?.bounds.size)!
         layout.minimumLineSpacing = 0
@@ -175,6 +175,13 @@ extension PageContentView {
         collectionVIew.setContentOffset(CGPoint(x: offsetX, y: 0), animated: false)
         
     }
-    
-    
+}
+
+
+extension PageContentView {
+    func refshUI(){
+        collectionVIew.frame = self.bounds
+        let layout = collectionVIew.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.itemSize = self.bounds.size
+    }
 }

@@ -87,7 +87,7 @@
 		2CAD181BF5A11D974DB470C4 /* Pods-DouYuZhiBo_new.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouYuZhiBo_new.debug.xcconfig"; path = "Target Support Files/Pods-DouYuZhiBo_new/Pods-DouYuZhiBo_new.debug.xcconfig"; sourceTree = "<group>"; };
 		3149CBFDFFCA3386D9232924 /* Pods-DouYuZhiBo_new.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouYuZhiBo_new.release.xcconfig"; path = "Target Support Files/Pods-DouYuZhiBo_new/Pods-DouYuZhiBo_new.release.xcconfig"; sourceTree = "<group>"; };
 		7F5C6CE9E252A55737B9D5D1 /* Pods_DouYuZhiBo_new.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DouYuZhiBo_new.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD3278B724C044EE008D9343 /* DouYuZhiBo_new.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouYuZhiBo_new.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD3278B724C044EE008D9343 /* 小庄斗鱼.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "小庄斗鱼.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD3278BA24C044EE008D9343 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD3278BC24C044EE008D9343 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BD3278C124C044EE008D9343 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -209,7 +209,7 @@
 		BD3278B824C044EE008D9343 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BD3278B724C044EE008D9343 /* DouYuZhiBo_new.app */,
+				BD3278B724C044EE008D9343 /* 小庄斗鱼.app */,
 				BD3278CD24C044EF008D9343 /* DouYuZhiBo_newTests.xctest */,
 				BD3278D824C044EF008D9343 /* DouYuZhiBo_newUITests.xctest */,
 			);
@@ -515,7 +515,7 @@
 			);
 			name = DouYuZhiBo_new;
 			productName = DouYuZhiBo_new;
-			productReference = BD3278B724C044EE008D9343 /* DouYuZhiBo_new.app */;
+			productReference = BD3278B724C044EE008D9343 /* 小庄斗鱼.app */;
 			productType = "com.apple.product-type.application";
 		};
 		BD3278CC24C044EF008D9343 /* DouYuZhiBo_newTests */ = {
@@ -905,7 +905,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.creative.Health-T";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "小庄斗鱼";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -927,7 +927,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.creative.Health-T";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "小庄斗鱼";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

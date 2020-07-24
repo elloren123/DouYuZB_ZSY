@@ -12,10 +12,11 @@
 
 import UIKit
 
- let kItemMargin : CGFloat = 10
- let kItemW : CGFloat = (kScreenW - kItemMargin * 3)/2
- let kNormalItemH : CGFloat = kItemW * 3 / 4
- let kHeaderH : CGFloat = 50
+let kItemMargin : CGFloat = 10
+let kItemW : CGFloat = (kScreenW - kItemMargin * 3)/2
+let kNormalItemH : CGFloat = kItemW * 3 / 4
+let kHeaderH : CGFloat = 50
+let kNavigationHiddenNofitication:String = "kNavigationHiddenNofitication"
 
 private let kNormalCellID = "kNormalCellID"
 private let kNormalHeaderID = "kNormalHeaderID"
