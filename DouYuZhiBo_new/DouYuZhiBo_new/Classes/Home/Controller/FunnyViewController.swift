@@ -59,6 +59,7 @@ extension FunnyViewController {
             }
             self.anchorGroupsNew.append(model)
             self.collectionView.reloadData()
+            self.removeImgV()
         }
     }
 }

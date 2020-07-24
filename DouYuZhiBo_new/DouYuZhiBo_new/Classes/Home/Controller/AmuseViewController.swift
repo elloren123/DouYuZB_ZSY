@@ -45,11 +45,12 @@ extension AmuseViewController {
 extension AmuseViewController {
      func reloadMessage(){
         baseVM = amuseVM
-        amuseVM.reloadAmuseData {
+        amuseVM.reloadAmuseData {[unowned self] in
             self.collectionView.reloadData()
             var tempGroups = self.amuseVM.anchorGroups
             tempGroups.removeFirst()
             self.topMenuView.groups = tempGroups
+            self.removeImgV()
         }
 
     }

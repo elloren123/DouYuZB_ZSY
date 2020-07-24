@@ -75,7 +75,6 @@ class GameViewController: BaseViewController {
     //MARK: - 系统回调
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.purple
         setupUI()
         reloadData()
     }
@@ -86,11 +85,10 @@ class GameViewController: BaseViewController {
 extension GameViewController {
     fileprivate func setupUI(){
         view.addSubview(collectionView)
-        
+        coverView = collectionView
+        collectionView.isHidden = true
         collectionView.addSubview(topHeaderView)
-        
         collectionView.addSubview(topGameView)
-        
         collectionView.contentInset = UIEdgeInsets(top:kHeaderViewH + kGameViewH, left: 0, bottom: 0, right: 0)
     }
     
@@ -99,7 +97,7 @@ extension GameViewController {
 //MARK: - 请求数据
 extension GameViewController {
     fileprivate func reloadData(){
-        gameVM.reloadData {
+        gameVM.reloadData {[unowned self] in
             self.collectionView.reloadData()
             
             if self.gameVM.gameGroup.count > 10 {
@@ -108,7 +106,7 @@ extension GameViewController {
                 
                 self.topGameView.anchorGroup = arr 
             }
-            
+            self.removeImgV()
         }
         
         
