@@ -24,13 +24,17 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小马哥视频学习" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AFX-Rg-83k">
-                        <rect key="frame" x="19" y="105" width="145" height="14"/>
+                        <rect key="frame" x="19" y="106" width="145" height="13"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Img_default" translatesAutoresizingMaskIntoConstraints="NO" id="T0D-bb-BfB">
                         <rect key="frame" x="0.0" y="0.0" width="169" height="100"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="169" id="Uj2-wA-k4S"/>
+                            <constraint firstAttribute="height" constant="100" id="nG5-qQ-4CH"/>
+                        </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -38,17 +42,17 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9b-5y-TCj">
+                        <rect key="frame" x="117" y="79" width="47" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <state key="normal" title="100人" image="Image_online"/>
+                    </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS开发" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHx-gG-qgy">
                         <rect key="frame" x="5" y="81" width="41" height="14"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9b-5y-TCj">
-                        <rect key="frame" x="117" y="79" width="47" height="16"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                        <state key="normal" title="100人" image="Image_online"/>
-                    </button>
                 </subviews>
             </view>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -59,6 +63,7 @@
                 <constraint firstAttribute="trailing" secondItem="AFX-Rg-83k" secondAttribute="trailing" constant="5" id="EWU-Qs-kh3"/>
                 <constraint firstItem="T0D-bb-BfB" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Ecs-UA-Rnh"/>
                 <constraint firstItem="AHx-gG-qgy" firstAttribute="leading" secondItem="T0D-bb-BfB" secondAttribute="leading" constant="5" id="MBp-8M-moS"/>
+                <constraint firstItem="AFX-Rg-83k" firstAttribute="top" secondItem="T0D-bb-BfB" secondAttribute="bottom" constant="6" id="Nv3-7L-ouW"/>
                 <constraint firstItem="RHQ-Rk-sPQ" firstAttribute="top" secondItem="T0D-bb-BfB" secondAttribute="bottom" constant="5" id="QG8-ZE-ihB">
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -67,6 +72,7 @@
                     </userDefinedRuntimeAttributes>
                 </constraint>
                 <constraint firstItem="T0D-bb-BfB" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Tab-eg-EbS"/>
+                <constraint firstItem="RHQ-Rk-sPQ" firstAttribute="top" secondItem="T0D-bb-BfB" secondAttribute="bottom" constant="5" id="WpF-du-JcQ"/>
                 <constraint firstAttribute="bottom" secondItem="AFX-Rg-83k" secondAttribute="bottom" constant="10" id="Zc1-Yw-2jl"/>
                 <constraint firstItem="RHQ-Rk-sPQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="dQG-lb-WGg"/>
                 <constraint firstItem="g9b-5y-TCj" firstAttribute="bottom" secondItem="T0D-bb-BfB" secondAttribute="bottom" constant="-5" id="f6G-Oo-Kak"/>

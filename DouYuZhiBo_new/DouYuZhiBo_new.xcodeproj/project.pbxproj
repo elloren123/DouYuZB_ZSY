@@ -62,6 +62,8 @@
 		BD68BE7324CA7A650005F31C /* RoomNormalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD68BE7224CA7A650005F31C /* RoomNormalViewController.swift */; };
 		BD68BE7524CA7A780005F31C /* RoomShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD68BE7424CA7A780005F31C /* RoomShowViewController.swift */; };
 		BD68BE7824CA7E6D0005F31C /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD68BE7724CA7E6D0005F31C /* BaseViewModel.swift */; };
+		BD68BE7B24CAAC020005F31C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD68BE7924CAAC020005F31C /* BaseViewController.swift */; };
+		BD68BE7C24CAAC020005F31C /* BaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD68BE7A24CAAC020005F31C /* BaseViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,6 +147,8 @@
 		BD68BE7224CA7A650005F31C /* RoomNormalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomNormalViewController.swift; sourceTree = "<group>"; };
 		BD68BE7424CA7A780005F31C /* RoomShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomShowViewController.swift; sourceTree = "<group>"; };
 		BD68BE7724CA7E6D0005F31C /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		BD68BE7924CAAC020005F31C /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		BD68BE7A24CAAC020005F31C /* BaseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaseViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -454,6 +458,8 @@
 		BD32794F24C14B50008D9343 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BD68BE7924CAAC020005F31C /* BaseViewController.swift */,
+				BD68BE7A24CAAC020005F31C /* BaseViewController.xib */,
 				BD68BE7024CA746B0005F31C /* BaseAnchorViewController.swift */,
 				BD68BE7224CA7A650005F31C /* RoomNormalViewController.swift */,
 				BD68BE7424CA7A780005F31C /* RoomShowViewController.swift */,
@@ -610,6 +616,7 @@
 				BD3278C224C044EE008D9343 /* Main.storyboard in Resources */,
 				BD32796824C2DC41008D9343 /* CollectionViewNormalCell.xib in Resources */,
 				BD32794924C14809008D9343 /* Follow.storyboard in Resources */,
+				BD68BE7C24CAAC020005F31C /* BaseViewController.xib in Resources */,
 				BD32793524C135D4008D9343 /* Live.storyboard in Resources */,
 				BD32793A24C13602008D9343 /* Profile.storyboard in Resources */,
 			);
@@ -689,6 +696,7 @@
 				BD68BE0424C806EB0005F31C /* RecommentCycleModel.swift in Sources */,
 				BD3278BD24C044EE008D9343 /* SceneDelegate.swift in Sources */,
 				BD68BDB024C696430005F31C /* NetworkTool.swift in Sources */,
+				BD68BE7B24CAAC020005F31C /* BaseViewController.swift in Sources */,
 				BD68BCB924C438400005F31C /* AnchorGroup.swift in Sources */,
 				BD32795C24C192F8008D9343 /* UIColor_Extension.swift in Sources */,
 				BD68BE6F24CA70EC0005F31C /* FunnyViewModel.swift in Sources */,

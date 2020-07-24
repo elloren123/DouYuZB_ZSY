@@ -13,7 +13,7 @@ import UIKit
 private let kEdgeMargin : CGFloat = 10 //这个是collectionview距离两侧的内边距
 
 private let kGameItemW : CGFloat = (kScreenW - 2 * kEdgeMargin) / 3
-private let kItemH : CGFloat = kGameItemW    // * 6 / 5
+private let kItemH : CGFloat = kGameItemW
 private let kHeaderViewH : CGFloat = 50
 private let kGameViewH : CGFloat = 90
 
@@ -21,9 +21,7 @@ private let kGameViewHeaderID = "kGameViewHeaderID"
 private let kGameViewCellID = "kGameViewCellID"
 
 
-class GameViewController: UIViewController {
-    //MARK: - 数据源
-//    var dataArray:[GameModel] = [GameModel]()
+class GameViewController: BaseViewController {
     
     //MARK: - 懒加载
     fileprivate lazy var gameVM:GameViewModel = GameViewModel()

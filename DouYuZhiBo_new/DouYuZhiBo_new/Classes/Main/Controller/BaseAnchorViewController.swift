@@ -22,7 +22,7 @@ private let kNormalHeaderID = "kNormalHeaderID"
 
 
 
-class BaseAnchorViewController: UIViewController {
+class BaseAnchorViewController: BaseViewController {
     
     //MARK: - 懒加载
      var baseVM:BaseViewModel = BaseViewModel();
@@ -69,6 +69,8 @@ class BaseAnchorViewController: UIViewController {
 extension BaseAnchorViewController {
     @objc func setupUI() {
         view.addSubview(collectionView)
+        coverView = collectionView
+        collectionView.isHidden = true
         
     }
 }
@@ -76,12 +78,7 @@ extension BaseAnchorViewController {
 //MARK: - 加载数据源
 extension BaseAnchorViewController {
     @objc func reloadData(){
-//        amuseVM.reloadData {
-//
-//            self.collectionView.reloadData()
-//
-//        }
-        
+
     }
 }
 

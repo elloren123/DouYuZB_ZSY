@@ -52,7 +52,7 @@ extension RecommendViewController {
     func loadData() {
         //请求推荐数据
         baseVM = recommentVM
-        recommentVM.requestData {
+        recommentVM.requestData {[unowned self] in
             self.collectionView.reloadData()
             var allAnchorGroups = self.recommentVM.anchorGroups
             //移除第一第二个,从第三个到底12个展示
@@ -65,6 +65,7 @@ extension RecommendViewController {
             
             self.gameView.anchorGroup = allAnchorGroups
             
+            self.removeImgV()
         }
         //请求轮播数据
         recommentVM.reloadCycleData {
