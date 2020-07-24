@@ -10,7 +10,7 @@ import UIKit
 
 class GameViewModel {
 
-    var gameGroup:[GameModel] = [GameModel]()
+    lazy var gameGroup:[GameModel] = [GameModel]()
     
     
     
