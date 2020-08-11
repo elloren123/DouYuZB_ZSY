@@ -50,7 +50,7 @@ class HomeViewController: UIViewController {
         //设置UI
         setupUI()
        
-        //监听通知
+        //监听通知-->导航栏是否移动隐藏
         NotificationCenter.default.addObserver(self, selector: #selector(self.navigationHiddenShow(noti:)), name: NSNotification.Name(rawValue: kNavigationHiddenNofitication), object: nil)
         
     }

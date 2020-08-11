@@ -93,7 +93,7 @@ extension RecommendViewController {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         //偏移量
         let offsetY = scrollView.contentOffset.y
-        //头部有偏移量,所以用0 也可以
+        //头部已经设置有偏移量,所以用0 也可以
         if  offsetY > 0 {
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: kNavigationHiddenNofitication), object: nil, userInfo: ["navHidden":"true"])
         } else {
